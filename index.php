@@ -284,7 +284,270 @@
             </form>
         </div>
     </section>
+<!-- フォームハンドラー連携フォーム: フォームハンドラーTEST（ライラックデザイン） -->
+<style>
+  .lilac-form-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e4d9f5;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 24px rgba(147, 112, 219, 0.15);
+    font-family: "Hiragino Sans", "Noto Sans JP", -apple-system, sans-serif;
+  }
+  .lilac-form-wrapper h2 {
+    margin: 0 0 8px;
+    color: #6b4ba1;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .lilac-form-wrapper p.lilac-sub {
+    margin: 0 0 24px;
+    color: #9a8fb5;
+    font-size: 13px;
+  }
+  .lilac-field {
+    margin-bottom: 18px;
+  }
+  .lilac-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5b4b7a;
+  }
+  .lilac-field .required {
+    color: #b48ce0;
+    margin-left: 2px;
+  }
+  .lilac-field input {
+    width: 100%;
+    padding: 11px 14px;
+    box-sizing: border-box;
+    border: 1.5px solid #d9c8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #4a3a63;
+    background: #faf7ff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .lilac-field input::placeholder {
+    color: #bcaed8;
+  }
+  .lilac-field input:focus {
+    outline: none;
+    border-color: #a97fd6;
+    box-shadow: 0 0 0 3px rgba(169, 127, 214, 0.2);
+    background: #ffffff;
+  }
+  .lilac-submit-btn {
+    width: 100%;
+    padding: 13px 0;
+    margin-top: 6px;
+    background: linear-gradient(135deg, #b48ce0, #8a6bc1);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(138, 107, 193, 0.35);
+  }
+  .lilac-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(138, 107, 193, 0.45);
+  }
+  .lilac-submit-btn:active {
+    transform: translateY(0);
+  }
+  .lilac-note {
+    margin-top: 14px;
+    font-size: 11px;
+    color: #b3a6cf;
+    text-align: center;
+  }
+</style>
 
+<div class="lilac-form-wrapper">
+  <h2>お問い合わせフォーム</h2>
+  <p class="lilac-sub">必要事項をご入力のうえ送信してください</p>
+
+  <form id="marketoForm" action="https://go.kiruaruka.xyz/l/961462/2024-03-18/5gbx6" method="POST">
+    <div class="lilac-field">
+      <label for="name">お名前<span class="required">*</span></label>
+      <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+    </div>
+
+    <div class="lilac-field">
+      <label for="email">メールアドレス<span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+    </div>
+
+    <div class="lilac-field">
+      <label for="kanri">管理コード</label>
+      <input type="text" id="kanri" name="kanri" placeholder="任意">
+    </div>
+
+    <!-- キャンペーンは固定値を送る想定。必要に応じて value を変更してください -->
+    <input type="hidden" id="campaign" name="campaign" value="c">
+
+    <!-- 参照元URLをエラー発生場所として送りたい場合はこちらを利用 -->
+    <input type="hidden" name="referrer" id="referrer" value="">
+
+    <button type="submit" class="lilac-submit-btn">送信する</button>
+  </form>
+
+  <p class="lilac-note">送信いただいた情報は適切に管理されます</p>
+</div>
+
+<!-- フォームハンドラー連携フォーム: フォームハンドラーTEST（ライラックデザイン） -->
+<style>
+  .lilac-form-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e4d9f5;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 24px rgba(147, 112, 219, 0.15);
+    font-family: "Hiragino Sans", "Noto Sans JP", -apple-system, sans-serif;
+  }
+  .lilac-form-wrapper h2 {
+    margin: 0 0 8px;
+    color: #6b4ba1;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .lilac-form-wrapper p.lilac-sub {
+    margin: 0 0 24px;
+    color: #9a8fb5;
+    font-size: 13px;
+  }
+  .lilac-field {
+    margin-bottom: 18px;
+  }
+  .lilac-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5b4b7a;
+  }
+  .lilac-field .required {
+    color: #b48ce0;
+    margin-left: 2px;
+  }
+  .lilac-field input {
+    width: 100%;
+    padding: 11px 14px;
+    box-sizing: border-box;
+    border: 1.5px solid #d9c8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #4a3a63;
+    background: #faf7ff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .lilac-field input::placeholder {
+    color: #bcaed8;
+  }
+  .lilac-field input:focus {
+    outline: none;
+    border-color: #a97fd6;
+    box-shadow: 0 0 0 3px rgba(169, 127, 214, 0.2);
+    background: #ffffff;
+  }
+  .lilac-submit-btn {
+    width: 100%;
+    padding: 13px 0;
+    margin-top: 6px;
+    background: linear-gradient(135deg, #b48ce0, #8a6bc1);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(138, 107, 193, 0.35);
+  }
+  .lilac-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(138, 107, 193, 0.45);
+  }
+  .lilac-submit-btn:active {
+    transform: translateY(0);
+  }
+  .lilac-note {
+    margin-top: 14px;
+    font-size: 11px;
+    color: #b3a6cf;
+    text-align: center;
+  }
+</style>
+
+<div class="lilac-form-wrapper">
+  <h2>お問い合わせフォーム</h2>
+  <p class="lilac-sub">必要事項をご入力のうえ送信してください</p>
+
+  <form id="marketoForm" action="https://go.kiruaruka.xyz/l/961462/2024-03-18/5gbx6" method="POST">
+    <div class="lilac-field">
+      <label for="name">お名前<span class="required">*</span></label>
+      <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+    </div>
+
+    <div class="lilac-field">
+      <label for="email">メールアドレス<span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+    </div>
+
+    <div class="lilac-field">
+      <label for="kanri">管理コード</label>
+      <input type="text" id="kanri" name="kanri" placeholder="任意">
+    </div>
+
+    <!-- キャンペーンは固定値を送る想定。必要に応じて value を変更してください -->
+    <input type="hidden" id="campaign" name="campaign" value="c">
+
+    <!-- 参照元URLをエラー発生場所として送りたい場合はこちらを利用 -->
+    <input type="hidden" name="referrer" id="referrer" value="">
+
+    <button type="submit" class="lilac-submit-btn">送信する</button>
+  </form>
+
+  <p class="lilac-note">送信いただいた情報は適切に管理されます</p>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById("marketoForm");
+  var referrerField = document.getElementById("referrer");
+  if (referrerField) {
+    referrerField.value = window.location.href;
+  }
+  form.addEventListener("submit", function () {
+    console.log("Form submitted to endpoint:", form.action);
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var form = document.getElementById("marketoForm");
+  var referrerField = document.getElementById("referrer");
+  if (referrerField) {
+    referrerField.value = window.location.href;
+  }
+  form.addEventListener("submit", function () {
+    console.log("Form submitted to endpoint:", form.action);
+  });
+})();
+</script>
+<
     <footer>
         <p>&copy; 2026 ILLUST HONG. All rights reserved.</p>
     </footer>
